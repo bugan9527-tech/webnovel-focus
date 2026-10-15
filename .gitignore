@@ -1,0 +1,17 @@
+# ---- 运行产物 ----
+# run.py 默认把结果写在 build/<书名>/ 下（解析、判定、渲染、EPUB/PDF 打包都在这里）。
+# 体积大、且包含第三方小说正文，不要进仓库——需要时重跑即可生成。
+build/
+*.print.html
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
