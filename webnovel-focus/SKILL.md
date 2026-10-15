@@ -28,6 +28,10 @@ metadata:
   边界比纯文本好认。
 - 依赖 Python 3 + Jinja2；重复检测用 scikit-learn（缺了自动跳过，其余照常）。不需要 jieba。
   EPUB 打包零依赖；PDF 需要本机有 Edge 或 Chrome（无头打印），没有就退回 EPUB。
+- 环境由助手自备，不要让用户手动装：缺 Python 3 就自动安装（Windows 用
+  `winget install Python.Python.3.12`，macOS 用 `brew install python3`，Linux 用系统包管理器），
+  再 `python -m pip install jinja2`（scikit-learn 可选）。装完先验证
+  `python scripts/run.py --help` 能跑，再进流程一。
 - 脚本用相对 `__file__` 的路径找 `assets/`，整个 skill 目录可以整体搬走。
 
 ## 流程一：新书第一次用（必做，别跳）

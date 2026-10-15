@@ -26,13 +26,13 @@
 把 `webnovel-focus/` 整个目录放进 Codex 的技能目录（`$CODEX_HOME/skills`，未设置时是 `~/.codex/skills`）：
 
 ```powershell
-git clone https://github.com/<你的用户名>/webnovel-focus.git
+git clone https://github.com/bugan9527-tech/webnovel-focus.git
 Copy-Item -Recurse .\webnovel-focus\webnovel-focus "$env:USERPROFILE\.codex\skills\webnovel-focus"
 ```
 
 ```bash
 # macOS / Linux
-git clone https://github.com/<你的用户名>/webnovel-focus.git
+git clone https://github.com/bugan9527-tech/webnovel-focus.git
 cp -R webnovel-focus/webnovel-focus ~/.codex/skills/webnovel-focus
 ```
 
@@ -61,7 +61,7 @@ python scripts/run.py sample build/书名/analyzed.json --tier fade --n 25 --con
 
 ## 依赖
 
-- Python 3 + Jinja2（渲染）。**EPUB 打包零依赖**，纯 zipfile 手写 XHTML。
+- Python 3 + Jinja2（渲染），通常由 AI 助手在首次使用时自动安装，无需手动准备。**EPUB 打包零依赖**，纯 zipfile 手写 XHTML。
 - scikit-learn 可选：只用于重复段落检测，缺了自动跳过，其余判定不受影响。
 - PDF 需要本机有 Edge 或 Chrome（无头打印）。不需要 WeasyPrint / calibre / pandoc。
 - 不需要 jieba：中文查重用 sklearn 的字符级 n-gram。
